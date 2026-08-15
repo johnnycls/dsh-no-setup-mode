@@ -67,9 +67,9 @@
 ### 免設置模式的標題列：三個模式
 | 模式 | 基礎 | 模型 | 思考強度 |
 |---|---|---|---|
-| 免設置：聊天模式（No-Setup Chat Mode） | 免設置 + 聯網（web_search / web_fetch） | DeepSeek-V4-Flash | off |
-| 免設置：工作模式（No-Setup Work Mode） | 標準模式 | DeepSeek-V4-Flash | high |
-| 免設置：專家模式（No-Setup Expert Mode） | PTC（Code Mode） | DeepSeek-V4-Pro | max |
+| 免設置：聊天（Chat） | 免設置 + 聯網（web_search / web_fetch） | DeepSeek-V4-Flash | off |
+| 免設置：工作（Work） | 標準模式 | DeepSeek-V4-Flash | high |
+| 免設置：專家（Expert） | PTC（Code Mode） | DeepSeek-V4-Pro | max |
 
 點擊即切換默認 Agent 預設、模型與思考強度（reasoning effort）。
 

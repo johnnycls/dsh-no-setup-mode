@@ -67,9 +67,9 @@ If in doubt, ask one short question ("Do you want me to install the no-setup mod
 ### No-Setup header: three modes
 | Mode | Base | Model | Thinking |
 |---|---|---|---|
-| 免設置：聊天模式（No-Setup Chat Mode） | No-Setup + web (`web_search` / `web_fetch`) | DeepSeek-V4-Flash | off |
-| 免設置：工作模式（No-Setup Work Mode） | Standard | DeepSeek-V4-Flash | high |
-| 免設置：專家模式（No-Setup Expert Mode） | PTC (Code Mode) | DeepSeek-V4-Pro | max |
+| 免設置：聊天（Chat） | No-Setup + web (`web_search` / `web_fetch`) | DeepSeek-V4-Flash | off |
+| 免設置：工作（Work） | Standard | DeepSeek-V4-Flash | high |
+| 免設置：專家（Expert） | PTC (Code Mode) | DeepSeek-V4-Pro | max |
 
 Clicking a mode switches the default agent preset, the model, and the thinking level (reasoning effort).
 

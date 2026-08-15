@@ -20,10 +20,10 @@ Cleanly remove the No-Setup Mode plugin and every trace it left behind, restorin
 
 2. **Tell the user to restart DSH** (bundles load at startup).
 
-3. **Delete the presets the plugin created** — only those whose `preset.yml` name matches `免設置：聊天模式` / `免設置：工作模式` / `免設置：專家模式` (never delete user-authored presets with the same directory name):
+3. **Delete the presets the plugin created** — only those whose `preset.yml` name matches `免設置：聊天` / `免設置：工作` / `免設置：專家` (never delete user-authored presets with the same directory name):
    ```bash
    for d in chat work expert; do
-     if [ -f "$HOME/.dsh/.agent-presets/$d/preset.yml" ] && grep -qE 'name: 免設置：(聊天模式|工作模式|專家模式)' "$HOME/.dsh/.agent-presets/$d/preset.yml"; then
+     if [ -f "$HOME/.dsh/.agent-presets/$d/preset.yml" ] && grep -qE 'name: 免設置：(聊天|工作|專家)' "$HOME/.dsh/.agent-presets/$d/preset.yml"; then
        rm -rf "$HOME/.dsh/.agent-presets/$d"
      fi
    done
