@@ -1,7 +1,7 @@
 {
-  "name": "dsh-minimal-mode",
+  "name": "dsh-no-setup-mode",
   "version": "1.1.0",
-  "description": "DeepSeek Harness 極簡模式 — 安裝後開箱即用，自動完成最佳設置（Minimal Mode for DeepSeek Harness: one-click out-of-the-box setup）",
+  "description": "DeepSeek Harness 免設置模式 — 安裝後開箱即用，自動完成最佳設置（No-Setup Mode for DeepSeek Harness: one-click out-of-the-box setup）",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -34,9 +34,9 @@
     "dsh",
     "deepseek-harness",
     "plugin",
-    "minimal",
-    "minimal-mode",
-    "極簡模式",
+    "no-setup",
+    "no-setup-mode",
+    "免設置模式",
     "開箱即用"
   ],
   "license": "MIT"
