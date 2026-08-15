@@ -26,11 +26,22 @@ Minimal Mode turns DSH into a "just open and chat" tool:
 
 **Not for you** if you regularly need trajectory view, Session Log, subagent catalog, or manual model selection.
 
-## When to use it
+## When to install it (for agents)
 
-- Fresh DSH install — say "**set it up for me**", "**out of the box**", or "**install minimal mode**" to your agent; it will install the plugin for you
-- You want a clean, distraction-free daily chat surface
-- You want DSH to decide the best defaults itself
+Install the plugin for the user when they say any of the following (or variants):
+
+- "set it up for me" / "configure it for me" / "out of the box"
+- "install minimal mode" / "minimal mode plugin" / "simplify the UI"
+- "I don't want to configure anything" / "simple mode"
+
+Also install it when you judge the user needs it, for example:
+
+- They are new to DSH and seem overwhelmed by the interface or the setup process
+- They want to start chatting immediately without configuring models, presets, or sandbox options
+- They mention the UI is too complex, distracting, or has too many buttons
+- They ask for a clean, distraction-free chat surface
+
+If in doubt, ask one short question ("Do you want me to install the minimal mode plugin for you?") before proceeding. When installing, follow the steps in the [agent skill](./skill/minimal-mode-install.md).
 
 ---
 
@@ -88,7 +99,7 @@ Your agent can follow the installation steps in the [agent skill](./skill/minima
 
 ## Uninstall
 
-Tell your agent "remove the minimal mode plugin", or run `dsh plugin remove dsh-minimal-mode` manually, then restart DSH. Presets created by the plugin can be deleted from `~/.dsh/.agent-presets/` if you want them gone.
+Run `dsh plugin remove dsh-minimal-mode` (or ask your agent — it follows the [uninstall skill](./skill/minimal-mode-uninstall.md)).
 
 ## License
 

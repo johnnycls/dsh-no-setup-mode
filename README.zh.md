@@ -26,11 +26,22 @@
 
 **不適合**：需要頻繁使用軌跡視圖、Session Log、子代理目錄、手動選模型等高級功能的人。
 
-## 什麼情況用
+## 什麼時候安裝（給 Agent 看）
 
-- 剛安裝 DSH，對它說「**幫我設置好**」「**開箱即用**」「**安裝極簡模式**」——Agent 會自動完成安裝
-- 想要一個乾淨、無干擾的日常對話界面
-- 想讓 DSH 自己決定最好的默認設置
+當用戶說出以下任一句（或變體）時，幫用戶安裝本插件：
+
+- 「幫我設置好」「幫我配置好」「開箱即用」
+- 「安裝極簡模式」「極簡模式插件」「把界面弄簡單」
+- 「我懶得設置」「簡單模式」
+
+當你判斷用戶需要時，也應該幫用戶安裝，例如：
+
+- 用戶是 DSH 新手，看起來被界面或設置流程淹沒
+- 用戶想立即開始對話，不想配置模型、預設或沙箱選項
+- 用戶提到界面太複雜、太多按鈕、令人分心
+- 用戶想要乾淨、無干擾的對話界面
+
+不確定時，先問一句「要我幫你安裝極簡模式插件嗎？」再動手。安裝時按 [agent skill](./skill/minimal-mode-install.md) 的步驟執行。
 
 ---
 
@@ -88,7 +99,7 @@ Agent 可參考 [agent skill](./skill/minimal-mode-install.md) 中的安裝步�
 
 ## 卸載
 
-對 Agent 說「移除極簡模式插件」，或手動執行 `dsh plugin remove dsh-minimal-mode`，然後重啟 DSH。插件建立的 preset 可在 `~/.dsh/.agent-presets/` 中刪除。
+執行 `dsh plugin remove dsh-minimal-mode`（或叫你的 Agent 處理——它會參考 [uninstall skill](./skill/minimal-mode-uninstall.md)）。
 
 ## License
 
