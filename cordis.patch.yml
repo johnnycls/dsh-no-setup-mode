@@ -1,0 +1,5 @@
+# dsh-minimal-mode bundle patch：極簡模式插件（Host + Client roster）
+# 安裝後永久生效；一行同時是 host 插件與瀏覽器 client roster 條目。
+- insert:
+    - id: minimal-mode
+      name: 'dsh-minimal-mode'

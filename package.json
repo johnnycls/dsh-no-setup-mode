@@ -1,0 +1,46 @@
+{
+  "name": "dsh-minimal-mode",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 極簡模式 — 安裝後開箱即用，自動完成最佳設置（Minimal Mode for DeepSeek Harness: one-click out-of-the-box setup）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection"
+      ],
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-settings": "0.1.0-rc.6",
+    "@deepseek-ai/dsh-agent-presets": "0.1.0-rc.6",
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "minimal",
+    "minimal-mode",
+    "極簡模式",
+    "開箱即用"
+  ],
+  "license": "MIT"
+}
