@@ -1,6 +1,6 @@
 {
   "name": "dsh-minimal-mode",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "DeepSeek Harness 極簡模式 — 安裝後開箱即用，自動完成最佳設置（Minimal Mode for DeepSeek Harness: one-click out-of-the-box setup）",
   "type": "module",
   "main": "lib/index.js",

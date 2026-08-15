@@ -73,6 +73,10 @@
 
 點擊即切換默認 Agent 預設與模型。
 
+### 餘額顯示
+- 輸入框下方右對齊顯示 DeepSeek 帳戶餘額——**API 返回的每個幣種（USD、CNY）各自顯示**，每輪對話結束自動刷新
+- 需要先設定 DeepSeek API Key（在極簡設置 ⚙ 中輸入；未設定 Key 前不顯示）
+
 ### 普通模式
 - UI 唯一改動：**通用設置最底部的「進入極簡模式」按鈕**——隨時可再進入
 - **聊天模式也會出現在普通模式的 Agent 預設列表中**（它常駐於 `~/.dsh/.agent-presets/` 以保留聯網工具）；不想看到可刪除該目錄——下次進入極簡模式時插件會重建
@@ -86,6 +90,22 @@
 > **安裝 github:johnnycls/dsh-minimal-mode**
 
 Agent 可參考 [agent skill](./skill/minimal-mode-install.md) 中的安裝步驟。全部安裝步驟都在 skill 裡——README 是給人看的，skill 是給 Agent 看的。
+
+**前置要求：** 已安裝 `git`（倉庫是公開的，無需認證）且能連上 GitHub。
+
+**安裝後請重啟 DSH**——插件在啟動時載入，下次打開就會自動進入極簡模式。（只刷新瀏覽器不夠：插件的 host 半邊必須重啟才生效。）
+
+### 疑難排解
+
+| 問題 | 解法 |
+|---|---|
+| 重啟後沒有任何變化 | 強制刷新瀏覽器（Ctrl+Shift+R）；若仍無效再重啟一次 DSH |
+| 輸入框下方沒有餘額 | 打開 ⚙ 輸入你的 DeepSeek API Key——設定後餘額即出現 |
+| `dsh plugin add` 報 pnpm/corepack 錯誤 | 先 `export COREPACK_HOME="$HOME/.cache/node/corepack"` 再重試安裝 |
+
+### 更新
+
+執行 `dsh plugin update dsh-minimal-mode`，然後重啟 DSH。（或叫你的 Agent 處理——它會參考安裝 skill。）
 
 ## 使用
 

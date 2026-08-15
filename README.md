@@ -73,6 +73,10 @@ If in doubt, ask one short question ("Do you want me to install the minimal mode
 
 Clicking a mode switches the default agent preset and the model.
 
+### Balance display
+- Shows your DeepSeek account balance — **every currency the API returns** (USD and CNY) — right-aligned under the composer, refreshed after every chat turn
+- Requires a DeepSeek API key (set it in the minimal settings dialog ⚙; nothing is shown until a key exists)
+
 ### Normal mode
 - The only UI change is an **"Enter Minimal Mode"** button at the bottom of General Settings — re-enter any time
 - The **Chat Mode** preset also appears in the normal mode agent list (it persists in `~/.dsh/.agent-presets/` to keep its web tools); delete that directory if you don't want it listed — the plugin will recreate it on next entry into minimal mode
@@ -86,6 +90,22 @@ Ask your agent to install it:
 > **Install github:johnnycls/dsh-minimal-mode**
 
 Your agent can follow the installation steps in the [agent skill](./skill/minimal-mode-install.md). All steps live there — the README is for humans, the skill is for agents.
+
+**Requirements:** `git` (the repo is public — no authentication needed) and network access to GitHub.
+
+**After installing, restart DSH** — the plugin loads at startup. From the next launch you're in minimal mode automatically. (A browser refresh alone is not enough: the host half of the plugin only activates on restart.)
+
+### Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| Nothing changes after restart | Hard-refresh the browser (Ctrl+Shift+R); if still nothing, restart DSH once more |
+| No balance under the input box | Open ⚙ and set your DeepSeek API key — the balance appears after that |
+| `dsh plugin add` fails with a pnpm/corepack error | `export COREPACK_HOME="$HOME/.cache/node/corepack"` and retry the install |
+
+### Updating
+
+Run `dsh plugin update dsh-minimal-mode`, then restart DSH. (Or ask your agent — it follows the install skill.)
 
 ## Usage
 
