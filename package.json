@@ -15,6 +15,8 @@
     "lib/client.js",
     "cordis.patch.yml",
     "README.md",
+    "README.zh.md",
+    "skill",
     "LICENSE"
   ],
   "dsh": {
@@ -27,11 +29,6 @@
       ],
       "platform": "web"
     }
-  },
-  "dependencies": {
-    "@deepseek-ai/dsh-settings": "0.1.0-rc.6",
-    "@deepseek-ai/dsh-agent-presets": "0.1.0-rc.6",
-    "@deepseek-ai/schemastery": "^3.18.0"
   },
   "keywords": [
     "dsh",
