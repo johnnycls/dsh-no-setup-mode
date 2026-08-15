@@ -2,9 +2,6 @@
 
 > **Welcome home, Master~** One command, and your no-setup maid handles everything from there.
 
-<p align="center">
-  <img src="assets/comparison.svg" alt="Before / after: standard mode vs no-setup mode" width="820">
-</p>
 
 **中文版（Chinese version）：[README.zh.md](./README.zh.md)**
 
