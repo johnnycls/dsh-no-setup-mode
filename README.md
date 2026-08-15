@@ -147,6 +147,15 @@ To create your own mode plugin:
 4. Reinstall: `dsh plugin add github:<you>/<repo>`, then restart DSH.
 
 
+## Running tests
+
+A smoke test checks bundle syntax and structure, name consistency (MODE / package / patch), endpoint paths, and — when DSH is running — the boot manifest and live endpoints:
+
+```bash
+bash scripts/smoke-test.sh
+```
+
+
 ## License
 
 MIT

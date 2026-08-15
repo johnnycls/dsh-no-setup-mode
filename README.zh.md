@@ -147,6 +147,15 @@ Agent 可參考 [agent skill](./skill/no-setup-mode-install.md) 中的安裝步�
 4. 重新安裝：`dsh plugin add github:<你的帳號>/<repo>`，然後重啟 DSH。
 
 
+## 執行測試
+
+冒煙測試會檢查 bundle 語法與結構、名稱一致性（MODE / package / patch）、端點路徑，以及（DSH 運行中時）boot manifest 與實際端點：
+
+```bash
+bash scripts/smoke-test.sh
+```
+
+
 ## License
 
 MIT
