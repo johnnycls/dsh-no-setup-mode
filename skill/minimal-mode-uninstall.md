@@ -20,10 +20,10 @@ Cleanly remove the Minimal Mode plugin and every trace it left behind, restoring
 
 2. **Tell the user to restart DSH** (bundles load at startup).
 
-3. **Delete the presets the plugin created** — only those whose `preset.yml` name matches `聊天模式` / `工作模式` / `專家模式` (never delete user-authored presets with the same directory name):
+3. **Delete the presets the plugin created** — only those whose `preset.yml` name matches `極簡：聊天模式` / `極簡：工作模式` / `極簡：專家模式` (never delete user-authored presets with the same directory name):
    ```bash
    for d in chat work expert; do
-     if [ -f "$HOME/.dsh/.agent-presets/$d/preset.yml" ] && grep -qE 'name: (聊天模式|工作模式|專家模式)' "$HOME/.dsh/.agent-presets/$d/preset.yml"; then
+     if [ -f "$HOME/.dsh/.agent-presets/$d/preset.yml" ] && grep -qE 'name: 極簡：(聊天模式|工作模式|專家模式)' "$HOME/.dsh/.agent-presets/$d/preset.yml"; then
        rm -rf "$HOME/.dsh/.agent-presets/$d"
      fi
    done

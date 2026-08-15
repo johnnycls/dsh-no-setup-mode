@@ -65,13 +65,13 @@ If in doubt, ask one short question ("Do you want me to install the minimal mode
 - **Exit minimal mode** button
 
 ### Minimal header: three modes
-| Mode | Base | Model |
-|---|---|---|
-| Chat Mode | Minimal + web (`web_search` / `web_fetch`) | DeepSeek-V4-Flash |
-| Work Mode | Standard | DeepSeek-V4-Flash |
-| Expert Mode | PTC (Code Mode) | DeepSeek-V4-Pro |
+| Mode | Base | Model | Thinking |
+|---|---|---|---|
+| 極簡：聊天模式（Minimal Chat Mode） | Minimal + web (`web_search` / `web_fetch`) | DeepSeek-V4-Flash | off |
+| 極簡：工作模式（Minimal Work Mode） | Standard | DeepSeek-V4-Flash | high |
+| 極簡：專家模式（Minimal Expert Mode） | PTC (Code Mode) | DeepSeek-V4-Pro | max |
 
-Clicking a mode switches the default agent preset and the model.
+Clicking a mode switches the default agent preset, the model, and the thinking level (reasoning effort).
 
 ### Balance display
 - Shows your DeepSeek account balance — **every currency the API returns** (USD and CNY) — right-aligned under the composer, refreshed after every chat turn

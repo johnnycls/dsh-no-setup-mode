@@ -65,13 +65,13 @@
 - **離開極簡模式**按鈕
 
 ### 極簡標題列：三個模式
-| 模式 | 基礎 | 模型 |
-|---|---|---|
-| 聊天模式 | 極簡 + 聯網（web_search / web_fetch） | DeepSeek-V4-Flash |
-| 工作模式 | 標準模式 | DeepSeek-V4-Flash |
-| 專家模式 | PTC（Code Mode） | DeepSeek-V4-Pro |
+| 模式 | 基礎 | 模型 | 思考強度 |
+|---|---|---|---|
+| 極簡：聊天模式（Minimal Chat Mode） | 極簡 + 聯網（web_search / web_fetch） | DeepSeek-V4-Flash | off |
+| 極簡：工作模式（Minimal Work Mode） | 標準模式 | DeepSeek-V4-Flash | high |
+| 極簡：專家模式（Minimal Expert Mode） | PTC（Code Mode） | DeepSeek-V4-Pro | max |
 
-點擊即切換默認 Agent 預設與模型。
+點擊即切換默認 Agent 預設、模型與思考強度（reasoning effort）。
 
 ### 餘額顯示
 - 輸入框下方右對齊顯示 DeepSeek 帳戶餘額——**API 返回的每個幣種（USD、CNY）各自顯示**，每輪對話結束自動刷新
