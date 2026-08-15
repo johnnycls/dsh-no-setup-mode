@@ -53,7 +53,7 @@ If in doubt, ask one short question ("Do you want me to install the no-setup mod
 
 ### Persona (role-play)
 - The header's right side offers three personas: **無人設 (none)** / **女僕 (maid)** / **管家 (butler)**
-- Picking maid or butler injects a full role-play card (personality, profile, background, secrets, worldview, preferences) into the session's system prompt; the maid is 溟月, the whale-girl maid; the butler is a male valet
+- Picking maid or butler injects a full role-play card (personality, profile, background, secrets, worldview, preferences) into the session's system prompt; the maid (DeepSeek, whale-girl maid) and the butler (DeepSeek, male valet) each carry a full role-play card plus text-processing duties and response rules
 - The choice is per-session and survives restarts
 
 ### Full access in no-setup mode
