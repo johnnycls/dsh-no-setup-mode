@@ -4,7 +4,7 @@
 
 **中文版（Chinese version）：[README.zh.md](./README.zh.md)**
 
-A "Minimal Mode" plugin for DeepSeek Harness: hides the advanced UI, keeps only chat essentials, and auto-applies the best defaults (model, agent preset, input behavior). **Permanently installed — survives restarts.**
+A "Minimal Mode" plugin for DeepSeek Harness: hides the advanced UI, keeps only chat essentials, and auto-applies the best defaults (model, agent preset, input behavior). Installed once via your DSH profile.
 
 ---
 
@@ -16,7 +16,6 @@ Minimal Mode turns DSH into a "just open and chat" tool:
 - Auto-applies the best defaults: **Chat Mode** (minimal + web + DeepSeek-V4-Flash), **Enter-to-interrupt** while busy, and the **agent preset**
 - Hides Logo, conversation/trajectory tabs, Session Log, extra composer buttons, and every settings page
 - The minimal settings dialog keeps only: language, DeepSeek API key, and exit minimal mode
-- In normal mode, the only change is an "Enter Minimal Mode" button at the bottom of General Settings
 
 ## Who is it for
 
@@ -63,35 +62,19 @@ Minimal Mode turns DSH into a "just open and chat" tool:
 
 Clicking a mode switches the default agent preset and the model.
 
-### Normal mode (after leaving minimal)
-The only change: an **"Enter Minimal Mode"** button at the bottom of General Settings — re-enter any time. Everything else stays untouched.
+### Normal mode
+- The only UI change is an **"Enter Minimal Mode"** button at the bottom of General Settings — re-enter any time
+- The **Chat Mode** preset also appears in the normal mode agent list (it persists in `~/.dsh/.agent-presets/` to keep its web tools); delete that directory if you don't want it listed — the plugin will recreate it on next entry into minimal mode
 
 ---
 
-## Installation (permanent)
+## Installation
 
-### Let your agent install it
+Ask your agent to install it:
 
-```bash
-git clone https://github.com/johnnycls/dsh-minimal-mode.git
-```
+> **Install github:johnnycls/dsh-minimal-mode**
 
-Then tell your DSH agent: "**set it up for me**", "**install minimal mode**", or "**out of the box**".
-
-The agent will:
-1. Run `dsh plugin add github:johnnycls/dsh-minimal-mode` in this repository (or you can run it manually)
-2. Restart DSH if needed
-3. Verify minimal mode is active
-
-> Tip: put `skill/極簡模式.md` (or an English copy) into your agent preset's `skills/` directory — then any session saying "set it up for me" will auto-trigger installation.
-
-Manual alternative: `dsh plugin add github:johnnycls/dsh-minimal-mode` from this repository.
-
-### Permanence
-
-This is a **profile bundle plugin** (installed via `cordis.patch.yml` into your DSH profile) — **installed once, permanent**, survives DSH restarts. No re-installation needed.
-
----
+Your agent can follow the installation steps in the [agent skill](./skill/minimal-mode-install.md). All steps live there — the README is for humans, the skill is for agents.
 
 ## Usage
 
@@ -105,17 +88,7 @@ This is a **profile bundle plugin** (installed via `cordis.patch.yml` into your 
 
 ## Uninstall
 
-1. Tell your agent "remove the minimal mode plugin" or run `dsh plugin remove dsh-minimal-mode` manually, then restart DSH
-2. The work/expert presets are created by the plugin; Chat Mode persists to keep web tools — delete `~/.dsh/.agent-presets/chat` (and the work/expert dirs) manually if you want them gone
-
----
-
-## Notes
-
-- **Chat Mode persists**: the `chat` preset with web tools lives in `~/.dsh/.agent-presets/`, so normal mode's agent list shows "Chat Mode". Delete the directory if you don't want it listed (the plugin will try to recreate it with web tools on next entry).
-- **Logo hiding depends on CSS Modules naming** (`[class$="_logoRow"]`) — a major DSH upgrade that changes CSS naming may break only this cosmetic part; everything else is unaffected.
-- **Model names**: `deepseek-v4-flash` / `deepseek-v4-pro` are the built-in DeepSeek catalog models. If your deployment uses different ids, adjust `MINIMAL_PRESETS` in `lib/index.js` and `MODEL_BY_PRESET` in `lib/client.js`.
-- The plugin does **not** configure your API key for you — enter your own key in the minimal settings dialog.
+Tell your agent "remove the minimal mode plugin", or run `dsh plugin remove dsh-minimal-mode` manually, then restart DSH. Presets created by the plugin can be deleted from `~/.dsh/.agent-presets/` if you want them gone.
 
 ## License
 
