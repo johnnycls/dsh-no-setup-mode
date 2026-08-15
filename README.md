@@ -51,6 +51,10 @@ If in doubt, ask one short question ("Do you want me to install the no-setup mod
 - Entering no-setup mode automatically: selects **Chat Mode** (no-setup + web + DeepSeek-V4-Flash), sets the default agent preset, and switches busy Enter to **interrupt-and-send** (`busyEnter: steer`)
 - All settings are written to the official settings store — identical to manual configuration, inspectable in normal mode at any time
 
+### Full access in no-setup mode
+- Entering no-setup mode switches the current session to **full access** (`danger-full-access`): no approval prompts while chatting; leaving no-setup mode restores the deployment default
+- ⚠️ Full access lets the agent modify anything on this machine without asking — only use no-setup mode when you trust the conversation
+
 ### Hidden in no-setup mode
 | Element | How |
 |---|---|
