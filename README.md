@@ -130,6 +130,23 @@ Run `dsh plugin update dsh-no-setup-mode`, then restart DSH. (Or ask your agent 
 
 Run `dsh plugin remove dsh-no-setup-mode` (or ask your agent — it follows the [uninstall skill](./skill/no-setup-mode-uninstall.md)).
 
+
+## Making your own mode (fork guide)
+
+This repo is designed to be forked: every user-facing name derives from one `MODE` object, so a fork becomes a separate plugin that cannot collide with the original (endpoints, state files, plugin id, and slot entry id are all derived from `MODE.code`).
+
+To create your own mode plugin:
+
+1. **Edit `MODE`** in `lib/index.js` **and** `lib/client.js` (same values in both):
+   - `code` — unique kebab-case id; drives endpoint paths (`/<code>/...`), the persona state file (`~/.dsh/.<code>-persona.json`), the cordis plugin id, and the settings entry id. Changing it isolates your plugin from every other mode plugin.
+   - `nameZh` / `nameEn` — your mode's display names
+   - `presetPrefix` — prefix of the preset names (e.g. `免設置` → your own)
+   - `presets` — the mode list (ids, copy sources, display-name suffixes)
+2. **Rename the package** in `package.json` (name / description / keywords) and the row in `cordis.patch.yml` (id and name must match your new `code` / package name).
+3. **Rename the GitHub repo.**
+4. Reinstall: `dsh plugin add github:<you>/<repo>`, then restart DSH.
+
+
 ## License
 
 MIT

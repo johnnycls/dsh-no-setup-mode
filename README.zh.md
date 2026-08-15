@@ -130,6 +130,23 @@ Agent 可參考 [agent skill](./skill/no-setup-mode-install.md) 中的安裝步�
 
 執行 `dsh plugin remove dsh-no-setup-mode`（或叫你的 Agent 處理——它會參考 [uninstall skill](./skill/no-setup-mode-uninstall.md)）。
 
+
+## 打造你自己的模式（Fork 指南）
+
+本 repo 專為 fork 設計：所有對外名稱都派生自單一的 `MODE` 物件——fork 之後就是一個獨立的插件，不會與原版衝突（端點路徑、狀態檔、插件 id、設置項 id 全部由 `MODE.code` 派生）。
+
+製作自己的模式插件：
+
+1. **修改 `MODE`**（`lib/index.js` 與 `lib/client.js` 各一份，兩處值一致）：
+   - `code` —— 唯一的小寫連字號 id；派生端點路徑（`/<code>/...`）、人設狀態檔（`~/.dsh/.<code>-persona.json`）、cordis 插件 id 與設置項 id。改它即可與其他模式插件徹底隔離。
+   - `nameZh` / `nameEn` —— 你的模式顯示名
+   - `presetPrefix` —— preset 名稱前綴（如「免設置」換成你自己的）
+   - `presets` —— 模式清單（id、複製來源、顯示名後綴）
+2. **改名套件**：`package.json`（name / description / keywords）與 `cordis.patch.yml` 中的插件行（id 與 name 須與新的 code / 包名一致）。
+3. **改名 GitHub repo。**
+4. 重新安裝：`dsh plugin add github:<你的帳號>/<repo>`，然後重啟 DSH。
+
+
 ## License
 
 MIT
