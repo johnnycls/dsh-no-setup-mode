@@ -51,6 +51,11 @@ If in doubt, ask one short question ("Do you want me to install the no-setup mod
 - Entering no-setup mode automatically: selects **Chat Mode** (no-setup + web + DeepSeek-V4-Flash), sets the default agent preset, and switches busy Enter to **interrupt-and-send** (`busyEnter: steer`)
 - All settings are written to the official settings store — identical to manual configuration, inspectable in normal mode at any time
 
+### Persona (role-play)
+- The header's right side offers three personas: **無人設 (none)** / **女僕 (maid)** / **管家 (butler)**
+- Picking maid or butler injects a full role-play card (personality, profile, background, secrets, worldview, preferences) into the session's system prompt; the maid is 溟月, the whale-girl maid; the butler is a male valet
+- The choice is per-session and survives restarts
+
 ### Full access in no-setup mode
 - Entering no-setup mode switches the current session to **full access** (`danger-full-access`): no approval prompts while chatting; leaving no-setup mode restores the deployment default
 - ⚠️ Full access lets the agent modify anything on this machine without asking — only use no-setup mode when you trust the conversation
