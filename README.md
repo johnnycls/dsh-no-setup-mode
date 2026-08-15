@@ -2,6 +2,10 @@
 
 > **Welcome home, Master~** One command, and your no-setup maid handles everything from there.
 
+<p align="center">
+  <img src="assets/comparison.svg" alt="Before / after: standard mode vs no-setup mode" width="820">
+</p>
+
 **中文版（Chinese version）：[README.zh.md](./README.zh.md)**
 
 A "No-Setup Mode" plugin for DeepSeek Harness: installed once, it hides the advanced UI, keeps only the chat essentials, and quietly applies the best defaults (model, agent preset, input behavior). You just open DSH and start talking — the plugin does the tidying.

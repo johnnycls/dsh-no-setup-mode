@@ -2,6 +2,10 @@
 
 > **主人，歡迎回來～** 一條指令裝好，剩下的交給 DeepSeek 女僕打理就好。
 
+
+<p align="center">
+  <img src="assets/comparison.svg" alt="安裝前/後對比：普通模式 vs 免設置模式" width="820">
+</p>
 **English version：[README.md](./README.md)**
 
 一個給 DeepSeek Harness（DSH）的免設置模式插件：裝好之後自動進入免設置界面，隱藏複雜功能，自動完成最佳設置（模型、Agent 預設、輸入行為），只保留核心對話與必要設置。透過 DSH profile 安裝一次即可。
