@@ -86,6 +86,23 @@ if curl -sf -m 3 "$DSH_URL/" > /dev/null 2>&1; then
   else
     fail "persona endpoint"
   fi
+  # 有效 payload：model 切換（settings 寫入）必須成功——防「settings is not defined」類回歸
+  if curl -s -X POST "$DSH_URL/$CODE/model" -H 'Content-Type: application/json' -d '{"preset":"chat"}' | grep -q '"ok":true'; then
+    ok "model endpoint (valid payload)"
+  else
+    fail "model endpoint (valid payload)"
+  fi
+  # access 冪等：對第一個 session 設 full 應成功
+  SESSION_ID="$(curl -s -X POST "$DSH_URL/api/session.list" -H 'Content-Type: application/json' -d '{"type":"client-request","rpcId":"smoke","method":"session.list","payload":{}}' | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{try{console.log(JSON.parse(d).result.value.items[0].sessionId)}catch(e){console.log('')}})" 2>/dev/null)"
+  if [ -n "$SESSION_ID" ]; then
+    if curl -s -X POST "$DSH_URL/$CODE/access" -H 'Content-Type: application/json' -d "{\"sessionId\":\"$SESSION_ID\",\"mode\":\"full\"}" | grep -q '"ok":true'; then
+      ok "access endpoint (valid payload)"
+    else
+      fail "access endpoint (valid payload)"
+    fi
+  else
+    echo "ℹ️  no session available — skipped access payload check"
+  fi
 else
   echo "⚠️  DSH not running — skipped live endpoint checks"
 fi
